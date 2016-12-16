@@ -9,11 +9,10 @@
 
 public class proj2 {
 	public static void main(String[] args) {
-		int fib=0,
-		    tot=1,
-		    sum = 0;
-		while(tot<4000000){
-			if((tot=fib+(fib=tot))%2==0)sum+=tot;
+		int fib = 0, tot = 1, sum = 0;
+		while (tot < 4000000) {
+			if ((tot = fib + (fib = tot)) % 2 == 0)
+				sum += tot;
 		}
 		System.out.println(sum);
 	}
