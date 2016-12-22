@@ -9,11 +9,15 @@
 
 public class proj2 {
 	public static void main(String[] args) {
+		long start = System.nanoTime();
 		int fib = 0, tot = 1, sum = 0;
 		while (tot < 4000000) {
-			if ((tot = fib + (fib = tot)) % 2 == 0)
+			tot = fib + (fib = tot);
+			if (tot % 2 == 0){
 				sum += tot;
+			}
 		}
-		System.out.println(sum);
+		System.out.println("Time to complete: " + (System.nanoTime() - start) + " ns");
+		System.out.println("The number is " + sum);
 	}
 }
